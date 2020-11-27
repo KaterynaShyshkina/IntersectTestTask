@@ -9,7 +9,7 @@ public class Solution {
                                                         List<? extends Number> secondList) {
         return firstList.stream()
                 .distinct()
-                .filter(x -> secondList.contains(x))
+                .filter(secondList::contains)
                 .collect(Collectors.toList());
     }
 
